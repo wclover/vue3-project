@@ -1,16 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-
-export const constantRoutes = [
-    {
-        path: '/404',
-        component: () => import('@/views/404/index.vue')
-    }
-]
+import {asyncRoutes, constantRoutes} from './modules/index'
 
 const router = createRouter({
     history: createWebHashHistory(),
     scrollBehavior: () => ({ top: 0 }),
-    routes: constantRoutes
+    routes: [...constantRoutes, ...asyncRoutes]
 })
 
 export default router
