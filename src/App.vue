@@ -1,4 +1,8 @@
 <script setup>
+import {useStore} from "vuex";
+
+const store = useStore()
+console.log(store.getters.fold)
 </script>
 
 <template>
