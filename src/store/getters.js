@@ -1,5 +1,5 @@
 const getters = {
-  username: state => state.user.username,
+  userInfo: state => state.user.userInfo,
   fold: state => state.app.fold,
   permissionRoutes: state => state.permission.routes
 }

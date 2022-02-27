@@ -3,8 +3,10 @@ export function filterAsyncRoutes(routes) {
   return routes
 }
 
+import {asyncRoutes} from '@/router/modules/index'
+
 const state = {
-  routes: []
+  routes: asyncRoutes
 }
 
 const mutations = {

@@ -1,4 +1,4 @@
-import Layout from '@/layout'
+import Layout from '@/layout/index.vue'
 
 export default {
   path: '/record',
@@ -10,7 +10,7 @@ export default {
     {
       path: 'index',
       name: 'RecordIndex',
-      component: () => import('@/views/RecordIndex'),
+      component: () => import('@/views/RecordIndex/index.vue'),
       meta: {title: '记录', icon: 'el-icon-location'}
     }
   ]

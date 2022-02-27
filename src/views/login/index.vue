@@ -145,7 +145,7 @@ const showPwd = () => {
       cursor: pointer;
       user-select: none;
     }
-    ::v-deep .el-form-item__label {
+    :deep(.el-form-item__label) {
       color: #ffffff;
     }
   }

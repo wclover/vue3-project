@@ -1,11 +1,11 @@
 const state = {
-  userInfo: JSON.parse(localStorage.getItem('vue2-userInfo')) || {}
+  userInfo: JSON.parse(localStorage.getItem('vue3-userInfo')) || {}
 }
 
 const mutations = {
   SET_USER_INFO(state, userInfo) {
     state.userInfo = userInfo
-    localStorage.setItem('vue2-userInfo', JSON.stringify(state.userInfo))
+    localStorage.setItem('vue3-userInfo', JSON.stringify(state.userInfo))
   }
 }
 
