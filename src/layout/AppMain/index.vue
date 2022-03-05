@@ -1,25 +1,26 @@
 <template>
   <div class="app_main">
-    <transition name="fade-transform" mode="out-in">
+    <!-- <transition name="fade-transform" mode="out-in">
       <keep-alive :include="cachedViews">
         <router-view />
       </keep-alive>
-    </transition>
-    <!-- <router-view v-slot="{ Record }">
+    </transition>-->
+    <router-view v-slot="{ Component }">
       <transition name="fade-transform" mode="out-in">
-        <keep-alive>
-          <component :is="Record"></component>
-        </keep-alive>
+        <div>
+          <keep-alive :include="cachedViews">
+            <component :is="Component"></component>
+          </keep-alive>
+        </div>
       </transition>
-    </router-view> -->
+    </router-view>
   </div>
 </template>
 
 <script setup>
 import { reactive, ref } from 'vue';
-// import Record from '@/views/RecordIndex/index.vue';
 
-const cachedViews = reactive([])
+const cachedViews = reactive(['RecordIndex', 'TableIndex'])
 const key = ref('')
 </script>
 
