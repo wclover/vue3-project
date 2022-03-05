@@ -28,7 +28,7 @@ export const asyncRoutes = [
    record,
    table,
   {
-    path: '/*',
+    path: '/:pathMatch(.*)*',
     name: 'NotMatch',
     redirect: '/404'
   }
