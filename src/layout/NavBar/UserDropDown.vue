@@ -17,13 +17,19 @@
 <script setup>
 import {useStore} from 'vuex'
 import {ArrowDown} from '@element-plus/icons-vue'
+import {removeToken} from '@/utils/auth'
+import { useRouter } from 'vue-router';
 
 const store = useStore()
 const username = store.getters.fold
 
+const router = useRouter()
+
 const handleCommand = (command) => {
   switch (command) {
     case 'signOut': {
+      removeToken()
+      router.push('/login')
       console.log('signOut')
       break
     }
