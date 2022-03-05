@@ -26,7 +26,7 @@ export default function permission(router) {
         } else {
           try {
             const accessRoutes = await store.dispatch('permission/generateRoutes')
-            router.addRoutes(accessRoutes)
+            router.addRoute(accessRoutes)
             next({ ...to, replace: true })
           } catch (error) {
             next(`/login`)
